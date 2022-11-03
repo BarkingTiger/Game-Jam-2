@@ -41,7 +41,7 @@ class ShowTextButton : MonoBehaviour
         //may need to make more of these scripts to update location and object spawned
         if(spawned) {
             spawn = (GameObject)Instantiate(prefab, pos, rot);
-            spawn.AddComponent<PlayerInteraction>();
+            spawn.AddComponent<ShowTextButton>();
         }
     }
 }
