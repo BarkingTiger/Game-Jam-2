@@ -1,47 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using System.Collections.Generic;
+using System.Collections;
  
-class ShowTextButton : MonoBehaviour
-{
-    public GameObject spawn;
-    public GameObject prefab;
-    private bool spawned = false;
-    private bool showText = false;
+public class PlayerInteraction : MonoBehaviour {
 
-    //test vector
-    Vector3 pos = Vector3.forward;
-    //tets rotation
-    Quaternion rot = Quaternion.Euler(0, 0, 0);
+    public GameObject Player;
+    public GameObject note;
+    public float minDist = 5f;
+    public string text = "Spooky skeletons";
+    float dist;
+    bool reading = false;
+    bool spawn = false;
+    bool once = true;
 
-    // Create a bool to say whether to show the button or not
-     
-    void OnMouseDown()
-    {
-        if(!showText)
-            showText = true;
-        // If you clicked the object, set showText to true
-        if(!spawned) {
-            spawned = true;
-        }
+    void Start() {
+        note.SetActive(false);
     }
-     
-    void OnGUI()
-    {
-        if(showText)
-        {
-            // If you've clicked the object, show this button
-            if(GUI.Button(new Rect(100,100,100,20), "Click To Close"))
-                // If you click this button, set showText to false
-                showText = false;
-        }
 
-        
-        //may need to make more of these scripts to update location and object spawned
-        if(spawned) {
-            spawn = (GameObject)Instantiate(prefab, pos, rot);
-            spawn.AddComponent<ShowTextButton>();
+    void Update () {
+        dist = Vector3.Distance(Player.gameObject.transform.position, gameObject.transform.position);
+        if (dist <= minDist) {
+            if(Input.GetKeyDown(KeyCode.E)) {
+              if(reading) {
+                  reading = false;
+               }
+               else {
+                   reading = true;
+                   spawn = true;
+               }
+         }
+     }
+      else {
+         reading = false;
+      }
+    }
+ 
+    void OnGUI() {
+        if(reading) {
+            GUI.TextArea(new Rect(Screen.height/2, Screen.width/2, 500, 500), text);
+            if (spawn && once) {
+                note.SetActive(true);
+                once = false;
+            }
+        }
+        else if(dist <= minDist) {
+            GUI.TextArea(new Rect(Screen.height/2, Screen.width/2, 500, 500), "Press 'E' to read.");
         }
     }
 }
