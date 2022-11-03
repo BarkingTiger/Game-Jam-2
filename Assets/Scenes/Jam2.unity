@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.73024267, g: 0.7889841, b: 0.8498617, a: 1}
+  m_IndirectSpecularColor: {r: 0.730239, g: 0.78898084, b: 0.849859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -816,17 +816,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c0c409bc4ba60b844ad1d4a7c7845369,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 99.4
+      value: 255.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0c409bc4ba60b844ad1d4a7c7845369,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0c409bc4ba60b844ad1d4a7c7845369,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 211.1
+      value: -63
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0c409bc4ba60b844ad1d4a7c7845369,
         type: 3}
@@ -1096,8 +1096,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Throws left: 123'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 874c85ea785ec7f4b9ce87b841c1a56c, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 874c85ea785ec7f4b9ce87b841c1a56c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8255,8 +8255,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Speed: 12/23'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 874c85ea785ec7f4b9ce87b841c1a56c, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 874c85ea785ec7f4b9ce87b841c1a56c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
