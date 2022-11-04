@@ -36,8 +36,12 @@ public class PlayerInteraction : MonoBehaviour {
     }
  
     void OnGUI() {
+        GUIStyle myButtonStyle = new GUIStyle(GUI.skin.box);
+        myButtonStyle.fontSize = 25;
+        myButtonStyle.wordWrap = true;
+        myButtonStyle.alignment = TextAnchor.UpperLeft;
         if(reading) {
-            GUI.TextArea(new Rect(Screen.height/2, Screen.width/2, 500, 500), text);
+            GUI.TextArea(new Rect(Screen.width/4, Screen.height/2, Screen.width/2, Screen.height/2), text, myButtonStyle);
             if (spawn && once) {
                 //note.SetActive(true);
                 note.GetComponent<MeshRenderer>().enabled = true;
